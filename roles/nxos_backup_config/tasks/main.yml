@@ -1,0 +1,10 @@
+---
+# tasks file for nxos_backup_config
+- name: backup configuration
+  nxos_config:
+    backup: yes
+  register: output
+
+- name: display backup directory
+  debug:
+    msg: "{{ output.backup_path }}"

@@ -1,0 +1,6 @@
+---
+- name: Backup NXOS configuration
+  connection: network_cli
+  hosts: nexus
+  roles:
+  - role: nxos_backup_config
